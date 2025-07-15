@@ -22,7 +22,7 @@ const Profile = () => {
 
   const fetchBookings = async (user) => {
     try {
-      const res = await axios.get(`http://localhost:4000/booking/user/${user}`);
+      const res = await axios.get(`https://hotelproject-rrz7.onrender.com/booking/user/${user}`);
       const sorted = (res.data.bookings || []).sort(
         (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
       );

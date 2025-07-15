@@ -12,7 +12,7 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:4000/auth/login", {
+      const res = await axios.post("https://hotelproject-rrz7.onrender.com/auth/login", {
         username,
         password,
       });

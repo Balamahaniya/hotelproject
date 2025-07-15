@@ -14,7 +14,7 @@ const AdminPanel = () => {
   // Fetch pending bookings from backend
   const fetchPendingBookings = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/booking/pending");
+      const res = await axios.get("https://hotelproject-rrz7.onrender.com/booking/pending");
       setBookings(res.data.bookings || []);
     } catch (error) {
       console.error("Error fetching pending bookings:", error);
@@ -24,7 +24,7 @@ const AdminPanel = () => {
   // Handle booking confirmation
   const handleConfirm = async (id) => {
     try {
-      await axios.put(`http://localhost:4000/booking/confirm/${id}`);
+      await axios.put(`https://hotelproject-rrz7.onrender.com/booking/confirm/${id}`);
       alert("✅ Booking confirmed successfully!");
       setBookings((prev) => prev.filter((b) => b._id !== id));
     } catch (error) {
@@ -41,7 +41,7 @@ const AdminPanel = () => {
     if (!confirmCancel) return;
 
     try {
-      await axios.delete(`http://localhost:4000/booking/cancel/${id}`);
+      await axios.delete(`https://hotelproject-rrz7.onrender.com/booking/cancel/${id}`);
       alert("❌ Booking rejected (cancelled).");
       setBookings((prev) => prev.filter((b) => b._id !== id));
     } catch (error) {

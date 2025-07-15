@@ -72,7 +72,7 @@ const BookingForm = () => {
 
   const fetchAvailability = async (roomType, checkin, checkout) => {
     try {
-      const res = await axios.get("http://localhost:4000/booking/availability", {
+      const res = await axios.get("https://hotelproject-rrz7.onrender.com/booking/availability", {
         params: { roomType, checkin, checkout },
       });
       if (res.data.success) {
@@ -87,7 +87,7 @@ const BookingForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/booking/create", {
+      const response = await axios.post("https://hotelproject-rrz7.onrender.com/booking/create", {
         ...formData,
         username: username,
       });

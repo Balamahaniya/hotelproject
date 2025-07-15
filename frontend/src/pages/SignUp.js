@@ -34,7 +34,7 @@ const SignUp = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:4000/auth/signup", formData);
+      const res = await axios.post("https://hotelproject-rrz7.onrender.com/auth/signup", formData);
       if (res.data.success) {
         setSuccess("User signed up successfully ✅");
         setError("");
