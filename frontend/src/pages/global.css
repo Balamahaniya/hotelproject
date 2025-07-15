@@ -1,0 +1,12 @@
+
+body {
+    background-image: url("resort.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh; 
+    color: white; 
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+  }
+  
