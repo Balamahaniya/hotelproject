@@ -33,3 +33,14 @@ router.post("/set", async (req, res) => {
 });
 
 module.exports = router;
+/*const express = require("express");
+const router = express.Router();
+
+// ✅ Import the controller function
+const { setRoomAvailability } = require("../controllers/roomController");
+
+// ✅ Route to set room availability (admin functionality)
+router.post("/set", setRoomAvailability);
+
+module.exports = router;
+*/
